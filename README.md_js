@@ -1,0 +1,49 @@
+/*
+Assessment Requirements
+1. Create a variable that can hold a number of cars. What type of variable might this be?
+2. Create an object inside your addCar function that will hold the metadata for your cars. 
+   The metadata values will be passed to the function as parameters. When the car is ready, 
+   you will store it in the variable you created in step 1.
+3. Your listCars() function will print all of your cars' metadata to the console (i.e., console.log("Model: " + someCar.model)).
+4. For good measure, getTotalCars() should return the number of cars you have created.
+*/
+
+// Create a variable to hold your cars
+const carCollection = [];
+
+// This function will take in some values as parameters, create a
+// car object using the parameters passed to it for its metadata,
+// and store it in the variable above.
+function addCar(make, model, year, color) {
+  const car = {
+    make: make,
+    model: model,
+    year: year,
+    color: color,
+  };
+  carCollection.push(car);
+  console.log("Added Car: " + make + " " + model);
+}
+
+// Create a function that will go through an array of cars
+// and print their metadata with console.log()
+function listCars() {
+  carCollection.forEach((car, index) => {
+    console.log(\nCar #${index + 1});
+    console.log("Make: " + car.make);
+    console.log("Model: " + car.model);
+    console.log("Year: " + car.year);
+    console.log("Color: " + car.color);
+  });
+}
+
+// Print the total number of cars we have added to the console
+function getTotalCars() {
+  console.log("\nTotal Cars Added: " + carCollection.length);
+}
+
+// Call your functions below this line
+addCar("Toyota", "Corolla", 2020, "Blue");
+addCar("Honda", "Civic", 2018, "Red");
+listCars();
+getTotalCars();
