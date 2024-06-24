@@ -29,7 +29,7 @@ function addCar(make, model, year, color) {
 // and print their metadata with console.log()
 function listCars() {
   carCollection.forEach((car, index) => {
-    console.log(\nCar #${index + 1});
+    console.log("\nCar #${index + 1}");
     console.log("Make: " + car.make);
     console.log("Model: " + car.model);
     console.log("Year: " + car.year);
